@@ -1,0 +1,31 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Novolex API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/Citas": {
+            "get": {
+                "summary": "This is to vie cites",
+                "operationId": "29529f0d78c11aa5f3f571333349446b",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "User's email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An example endpoint"
+                    }
+                }
+            }
+        }
+    }
+}

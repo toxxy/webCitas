@@ -1,0 +1,82 @@
+[28324] Log opened at 2024-02-19 22:14:30.105027
+[28324] [Step Debug] INFO: Connecting to configured address/port: 127.0.0.1:0.
+[28324] [Step Debug] WARN: Creating socket for '127.0.0.1:0', connect: 10049.
+[28324] [Step Debug] ERR: Could not connect to debugging client. Tried: 127.0.0.1:0 (through xdebug.client_host/xdebug.client_port).
+[28324] Log closed at 2024-02-19 22:14:30.106890
+
+[33540] Log opened at 2024-02-19 22:14:51.983081
+[33540] [Step Debug] INFO: Connecting to configured address/port: 127.0.0.1:0.
+[33540] [Step Debug] WARN: Creating socket for '127.0.0.1:0', connect: 10049.
+[33540] [Step Debug] ERR: Could not connect to debugging client. Tried: 127.0.0.1:0 (through xdebug.client_host/xdebug.client_port).
+[33540] Log closed at 2024-02-19 22:14:51.984950
+
+[9204] Log opened at 2024-02-19 22:14:54.476872
+[9204] [Step Debug] INFO: Connecting to configured address/port: 127.0.0.1:53791.
+[9204] [Step Debug] INFO: Connected to debugging client: 127.0.0.1:53791 (through xdebug.client_host/xdebug.client_port).
+[9204] [Step Debug] -> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" fileuri="file:///C:/Users/ecardenaz.DUROBAG/OneDrive%20-%20Novolex/Programs/Citas/back/novolex-app/routes/web.php" language="PHP" xdebug:language_version="8.3.2" protocol_version="1.0" appid="9204" idekey="VSCODE"><engine version="3.3.1"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[https://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2023 by Derick Rethans]]></copyright></init>
+
+[9204] [Step Debug] <- feature_set -i 1 -n resolved_breakpoints -v 1
+[9204] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="resolved_breakpoints" success="1"></response>
+
+[9204] [Step Debug] <- feature_set -i 2 -n notify_ok -v 1
+[9204] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="notify_ok" success="1"></response>
+
+[9204] [Step Debug] <- feature_set -i 3 -n extended_properties -v 1
+[9204] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="3" feature="extended_properties" success="1"></response>
+
+[9204] [Step Debug] <- feature_set -i 4 -n breakpoint_include_return_value -v 1
+[9204] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="4" feature="breakpoint_include_return_value" success="1"></response>
+
+[9204] [Step Debug] <- feature_set -i 5 -n max_children -v 100
+[9204] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="5" feature="max_children" success="1"></response>
+
+[9204] [Step Debug] <- step_into -i 6
+[9204] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="6" status="break" reason="ok"><xdebug:message filename="file:///C:/Users/ecardenaz.DUROBAG/OneDrive%20-%20Novolex/Programs/Citas/back/novolex-app/routes/web.php" lineno="16"></xdebug:message></response>
+
+[9204] [Step Debug] <- stack_get -i 7
+[9204] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="7"><stack where="{main}" level="0" type="file" filename="file:///C:/Users/ecardenaz.DUROBAG/OneDrive%20-%20Novolex/Programs/Citas/back/novolex-app/routes/web.php" lineno="16"></stack></response>
+
+[9204] [Step Debug] <- run -i 8
+[9204] [Step Debug] -> <notify xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" name="error"><xdebug:message filename="file:///C:/Users/ecardenaz.DUROBAG/OneDrive%20-%20Novolex/Programs/Citas/back/novolex-app/routes/web.php" lineno="16" type="Fatal error"><![CDATA[Uncaught Error: Class "Illuminate\Support\Facades\Route" not found]]></xdebug:message></notify>
+
+[9204] [Step Debug] -> <notify xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" name="error"><xdebug:message filename="file:///C:/Users/ecardenaz.DUROBAG/OneDrive%20-%20Novolex/Programs/Citas/back/novolex-app/routes/web.php" lineno="16" type="Fatal error"><![CDATA[Uncaught Error: Class "Illuminate\Support\Facades\Route" not found]]></xdebug:message></notify>
+
+[9204] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="run" transaction_id="8" status="stopping" reason="ok"></response>
+
+[9204] [Step Debug] <- stop -i 9
+[9204] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stop" transaction_id="9" status="stopped" reason="ok"></response>
+
+[9204] Log closed at 2024-02-19 22:15:27.080194
+
+[16876] Log opened at 2024-02-19 22:15:52.701504
+[16876] [Step Debug] INFO: Connecting to configured address/port: 127.0.0.1:53836.
+[16876] [Step Debug] INFO: Connected to debugging client: 127.0.0.1:53836 (through xdebug.client_host/xdebug.client_port).
+[16876] [Step Debug] -> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" fileuri="file:///C:/Users/ecardenaz.DUROBAG/OneDrive%20-%20Novolex/Programs/Citas/back/novolex-app/routes/web.php" language="PHP" xdebug:language_version="8.3.2" protocol_version="1.0" appid="16876" idekey="VSCODE"><engine version="3.3.1"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[https://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2023 by Derick Rethans]]></copyright></init>
+
+[16876] [Step Debug] <- feature_set -i 1 -n resolved_breakpoints -v 1
+[16876] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="resolved_breakpoints" success="1"></response>
+
+[16876] [Step Debug] <- feature_set -i 2 -n notify_ok -v 1
+[16876] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="notify_ok" success="1"></response>
+
+[16876] [Step Debug] <- feature_set -i 3 -n extended_properties -v 1
+[16876] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="3" feature="extended_properties" success="1"></response>
+
+[16876] [Step Debug] <- feature_set -i 4 -n breakpoint_include_return_value -v 1
+[16876] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="4" feature="breakpoint_include_return_value" success="1"></response>
+
+[16876] [Step Debug] <- feature_set -i 5 -n max_children -v 100
+[16876] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="5" feature="max_children" success="1"></response>
+
+[16876] [Step Debug] <- run -i 6
+[16876] [Step Debug] -> <notify xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" name="error"><xdebug:message filename="file:///C:/Users/ecardenaz.DUROBAG/OneDrive%20-%20Novolex/Programs/Citas/back/novolex-app/routes/web.php" lineno="16" type="Fatal error"><![CDATA[Uncaught Error: Class "Illuminate\Support\Facades\Route" not found]]></xdebug:message></notify>
+
+[16876] [Step Debug] -> <notify xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" name="error"><xdebug:message filename="file:///C:/Users/ecardenaz.DUROBAG/OneDrive%20-%20Novolex/Programs/Citas/back/novolex-app/routes/web.php" lineno="16" type="Fatal error"><![CDATA[Uncaught Error: Class "Illuminate\Support\Facades\Route" not found]]></xdebug:message></notify>
+
+[16876] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="run" transaction_id="6" status="stopping" reason="ok"></response>
+
+[16876] [Step Debug] <- stop -i 7
+[16876] [Step Debug] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stop" transaction_id="7" status="stopped" reason="ok"></response>
+
+[16876] Log closed at 2024-02-19 22:15:52.738912
+
