@@ -33,8 +33,7 @@ class AuthController extends Controller
             'token' => $token,
         ];
 
-       // return response(null, 200);
-       return response($response,200);
+        return response(null, 200);
     }
 
     public function login(Request $request)
@@ -51,8 +50,8 @@ class AuthController extends Controller
 
         }else{
         $token = $user->createToken('Token')->plainTextToken;
-        $cookie = cookie('cookie_token', $token, 60 * 24);
-            return response(["token" => $token, 'message' => 'Credenciales correctas'], 200)->withoutCookie($cookie);
+        $cookie = cookie('token', $token, 60 * 24);
+            return response(["token" => $token, 'message' => 'Credenciales correctas'], 200)->withCookie($cookie);
         }
     }
 
@@ -61,15 +60,18 @@ class AuthController extends Controller
         if (auth()->check()) {
             auth()->user()->tokens()->delete();
         } else {
-            return response(['message' => 'Usuario no registrado'], 401);
+            return response(['message' => 'Usuario no autentificado'], 404);
         }
-
         return response(['message' => 'Se cerró correctamente la sesión'], 200);
     }
 
-    public function user(Request $request)
+    public function UInfo(Request $request)
     {
-        return auth()->user();
-        return response($request->user(), 200);
+        $user = auth()->user();
+        if ($user) {
+            return response($user, 200);
+        } else {
+            return response('No autentificado', 401);
+        }
     }
 }
