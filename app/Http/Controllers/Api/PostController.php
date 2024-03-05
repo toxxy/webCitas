@@ -34,6 +34,7 @@ class PostController extends Controller
     {
         $Citas2s = Citas2::all();
         return 'DATA INSIDE' . '<br>' . '<br>' . "\n $Citas2s";
+        /**Esto es un ejemplo */
     }
 
     public function store(StorePostRequest $request)
