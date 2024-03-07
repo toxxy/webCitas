@@ -47,10 +47,9 @@ class AuthController extends Controller
 
         if (!$user || !Hash::check($campos['Password'], $user->Password)) {
             return response(['message' => 'Credenciales incorrectas'], 401);
-
-        }else{
-        $token = $user->createToken('Token')->plainTextToken;
-        $cookie = cookie('token', $token, 60 * 24);
+        } else {
+            $token = $user->createToken('Token')->plainTextToken;
+            $cookie = cookie('token', $token, 60 * 24);
             return response(["token" => $token, 'message' => 'Credenciales correctas'], 200)->withCookie($cookie);
         }
     }
@@ -70,6 +69,8 @@ class AuthController extends Controller
         $user = auth()->user();
         if ($user) {
             return response($user, 200);
+            // $token = $user->createToken('Token')->plainTextToken;
+            // return response(['user' => $user, 'token' => $token], 200);
         } else {
             return response('No autentificado', 401);
         }
